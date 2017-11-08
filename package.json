@@ -1,0 +1,41 @@
+{
+  "name": "test-webpack-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:test": "webpack --config build/webpack.test.config.js --watch",
+    "lint": "eslint .",
+    "test": "npm run unit && npm run lint",
+    "unit": "jest --watch",
+    "unit:watch": "npm run jest -- --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-env": "^2.4.1",
+    "eslint": "^4.10.0",
+    "eslint-plugin-vue": "^3.13.1",
+    "jest": "^20.0.0",
+    "vue": "^2.5.3",
+    "vue-jest": "^1.0.2",
+    "vue-loader": "^13.4.0",
+    "vue-template-compiler": "^2.5.3",
+    "vue-test-loader": "^0.2.0",
+    "vue-test-utils": "^1.0.0-beta.4",
+    "webpack": "^3.8.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+    },
+    "mapCoverage": true
+  }
+}
